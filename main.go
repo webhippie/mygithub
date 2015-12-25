@@ -33,8 +33,6 @@ func main() {
 	app.Author = "Thomas Boerger <thomas@webhippie.de>"
 	app.Usage = "Some tiny GitHub client utilities for daily work"
 
-	app.HideHelp = true
-
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:        "token, t",
