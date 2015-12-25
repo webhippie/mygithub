@@ -1,0 +1,32 @@
+clone:
+  path: github.com/webhippie/mygithub
+
+build:
+  image: golang:1.5
+
+  commands:
+    - make deps
+    - make build
+    - make test
+    - make release
+
+publish:
+  github_release:
+    api_key: $$GITHUB_APIKEY
+    files:
+      - dist/*
+    when:
+      event: tag
+
+notify:
+  email:
+    from: drone@webhippie.de
+    host: $$EMAIL_HOST
+    username: $$EMAIL_USERNAME
+    password: $$EMAIL_PASSWORD
+    recipients:
+      - thomas@webhippie.de
+    when:
+      success: false
+      failure: true
+      change: true

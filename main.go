@@ -2,14 +2,14 @@ package main
 
 import (
 	"fmt"
-	"os"
-
 	"github.com/codegangsta/cli"
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
+	"os"
 )
 
 var (
+	version  string
 	token    string
 	username string
 
@@ -17,22 +17,36 @@ var (
 )
 
 func main() {
+	cli.HelpFlag = cli.BoolFlag{
+		Name:  "help, h",
+		Usage: "Show the help, so what you see now",
+	}
+
+	cli.VersionFlag = cli.BoolFlag{
+		Name:  "version, v",
+		Usage: "Print the current version of that tool",
+	}
+
 	app := cli.NewApp()
-	app.Name = "ghlist"
-	app.Usage = "List github repositories"
-	app.Version = "0.0.1"
+	app.Name = "mygithub"
+	app.Version = version
+	app.Author = "Thomas Boerger <thomas@webhippie.de>"
+	app.Usage = "Some tiny GitHub client utilities for daily work"
+
+	app.HideHelp = true
 
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
 			Name:        "token, t",
 			Usage:       "GitHub access token",
-			EnvVar:      "GHLIST_TOKEN",
+			EnvVar:      "MYGITHUB_TOKEN",
 			Destination: &token,
+			Value:       "",
 		},
 	}
 
 	app.Before = func(context *cli.Context) error {
-		if len(token) > 0 {
+		if token != "" {
 			ts := oauth2.StaticTokenSource(
 				&oauth2.Token{
 					AccessToken: token,
@@ -54,9 +68,9 @@ func main() {
 
 	app.Commands = []cli.Command{
 		{
-			Name:  "list",
-			Aliases:     []string{"l"},
-			Usage: "List available repositories",
+			Name:    "list",
+			Aliases: []string{"l"},
+			Usage:   "List available repositories",
 			Action: func(c *cli.Context) {
 				if len(c.Args()) > 0 {
 					username = c.Args().First()
