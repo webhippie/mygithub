@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
+	"os"
+
+	"golang.org/x/oauth2"
 	"github.com/codegangsta/cli"
 	"github.com/google/go-github/github"
-	"golang.org/x/oauth2"
-	"os"
 )
 
 var (
