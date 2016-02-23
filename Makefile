@@ -21,7 +21,7 @@ deps:
 build: $(BIN)/$(EXECUTABLE)
 
 test:
-	go test -cover ./...
+	GO15VENDOREXPERIMENT=1 go test -cover ./...
 
 release: $(RELEASES)
 
