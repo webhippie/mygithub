@@ -16,7 +16,7 @@ clean:
 
 deps:
 	GO15VENDOREXPERIMENT=1 go get -u github.com/govend/govend
-	govend -v
+	GO15VENDOREXPERIMENT=1 govend -v
 
 build: $(BIN)/$(EXECUTABLE)
 
