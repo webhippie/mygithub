@@ -11,6 +11,9 @@ build:
     - make release
 
 publish:
+  coverage:
+    when:
+      branch: master
   github_release:
     api_key: $$GITHUB_APIKEY
     files:
@@ -19,6 +22,19 @@ publish:
       event: tag
 
 notify:
+  slack:
+    webhook_url: $$SLACK_WEBHOOK
+    channel: develop
+    username: dronehippie
+
+  irc:
+    prefix: build
+    nick: dronehippie
+    channel: webhippie
+    server:
+      host: chat.freenode.net
+      port: 6667
+
   email:
     from: drone@webhippie.de
     host: $$EMAIL_HOST
