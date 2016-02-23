@@ -2,13 +2,19 @@ clone:
   path: github.com/webhippie/mygithub
 
 build:
-  image: golang:1.5
+  testing:
+    image: golang:1.5
+    commands:
+      - make deps
+      - make build
+      - make test
 
-  commands:
-    - make deps
-    - make build
-    - make test
-    - make release
+  release:
+    image: golang:1.5
+    commands:
+      - make release
+    when:
+      event: tag
 
 publish:
   coverage:
@@ -25,11 +31,11 @@ notify:
   slack:
     webhook_url: $$SLACK_WEBHOOK
     channel: develop
-    username: dronehippie
+    username: hippie
 
   irc:
     prefix: build
-    nick: dronehippie
+    nick: hippie
     channel: webhippie
     server:
       host: chat.freenode.net
