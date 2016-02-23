@@ -15,7 +15,8 @@ clean:
 	@rm -rf $(BIN) $(DIST)
 
 deps:
-	go get -t ./...
+	GO15VENDOREXPERIMENT=1 go get -u github.com/govend/govend
+	govend -v
 
 build: $(BIN)/$(EXECUTABLE)
 
@@ -28,12 +29,12 @@ install: $(BIN)/$(EXECUTABLE)
 	cp $< $(GOPATH)/bin/
 
 $(BIN)/$(EXECUTABLE):
-	CGO_ENABLED=0 go build -ldflags '-s -w $(LDFLAGS)' -o $@
+	GO15VENDOREXPERIMENT=1 CGO_ENABLED=0 go build -ldflags '-s -w $(LDFLAGS)' -o $@
 
 $(BIN)/%/$(EXECUTABLE): GOOS=$(firstword $(subst -, ,$*))
 $(BIN)/%/$(EXECUTABLE): GOARCH=$(subst .exe,,$(word 2,$(subst -, ,$*)))
 $(BIN)/%/$(EXECUTABLE):
-	CGO_ENABLED=0 GOOS=$(GOOS) GOARCH=$(GOARCH) go build -ldflags '-s -w $(LDFLAGS)' -o $@
+	GO15VENDOREXPERIMENT=1 CGO_ENABLED=0 GOOS=$(GOOS) GOARCH=$(GOARCH) go build -ldflags '-s -w $(LDFLAGS)' -o $@
 
 $(DIST)/$(EXECUTABLE)-%: GOOS=$(firstword $(subst -, ,$*))
 $(DIST)/$(EXECUTABLE)-%: GOARCH=$(subst .exe,,$(word 2,$(subst -, ,$*)))
