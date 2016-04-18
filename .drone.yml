@@ -52,6 +52,16 @@ publish:
     when:
       event: tag
 
+  rsync:
+    user: deploy
+    host: dl.webhippie.de
+    source: dist/publish/
+    target: $$BASE_PATH/mygithub/updates
+    recursive: true
+    delete: true
+    when:
+      event: tag
+
   github_release:
     api_key: $$GITHUB_APIKEY
     files:
