@@ -11,8 +11,14 @@ vendors:
   rev: f8cebc8ad645ff0e5df4ffc1059f644c3cb99b1c
 - path: github.com/google/go-querystring
   rev: 9235644dd9e52eeae6fa48efd539fdc351a0af53
+- path: github.com/kardianos/osext
+  rev: 29ae4ffbc9a6fe9fb2bc5029050ce6996ea1d3bc
+- path: github.com/kr/binarydist
+  rev: 9955b0ab8708602d411341e55fffd7e0700f86bd
 - path: github.com/pmezard/go-difflib
   rev: 792786c7400a136282c1664665ae0a8db921c6c2
+- path: github.com/sanbornm/go-selfupdate
+  rev: 333a93f08e13e4389fb21bfa530140fc0b884582
 - path: github.com/stretchr/testify
   rev: bcd9e3389dd03b0b668d11f4d462a6af6c2dfd60
 - path: golang.org/x/net
@@ -23,3 +29,5 @@ vendors:
   rev: f64b50fbea64174967a8882830d621a18ee1548e
 - path: google.golang.org/appengine
   rev: e234e71924d4aa52444bc76f2f831f13fa1eca60
+- path: gopkg.in/inconshreveable/go-update.v0
+  rev: d8b0b1d421aa1cbf392c05869f8abbc669bb7066
