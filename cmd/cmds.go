@@ -11,9 +11,10 @@ import (
 func Commands() []cli.Command {
 	return []cli.Command{
 		{
-			Name:    "list",
-			Aliases: []string{"l"},
-			Usage:   "List available repositories",
+			Name:      "list",
+			Aliases:   []string{"l"},
+			Usage:     "List available repositories",
+			ArgsUsage: "<user/org>",
 			Action: func(c *cli.Context) {
 				if len(c.Args()) < 1 {
 					fmt.Println("Please provide a username or org")
