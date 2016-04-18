@@ -1,16 +1,27 @@
 DIST := dist
 BIN := bin
 EXECUTABLE := mygithub
-VERSION := $(shell cat VERSION)
+SHA := $(shell git rev-parse --short HEAD)
 
-LDFLAGS += -X "main.version=$(VERSION)"
-
-RELEASES ?= $(DIST)/$(EXECUTABLE)-linux-amd64 \
-	$(DIST)/$(EXECUTABLE)-linux-386 \
-	$(DIST)/$(EXECUTABLE)-linux-arm \
-	$(DIST)/$(EXECUTABLE)-darwin-amd64
+RELEASES ?= $(BIN)/$(EXECUTABLE)-linux-amd64 \
+	$(BIN)/$(EXECUTABLE)-linux-386 \
+	$(BIN)/$(EXECUTABLE)-linux-arm \
+	$(BIN)/$(EXECUTABLE)-linux-arm64 \
+	$(BIN)/$(EXECUTABLE)-darwin-amd64
 
 PACKAGES ?= $(shell go list ./... | grep -v /vendor/)
+
+ifneq ($(CI_TAG),)
+	VERSION ?= $(CI_TAG)
+else
+	ifneq ($(CI_BRANCH),)
+		VERSION ?= $(CI_BRANCH)
+	else
+		VERSION ?= master
+	endif
+endif
+
+LDFLAGS += -X "github.com/webhippie/mygithub/config.VersionDev=$(SHA)"
 
 all: clean deps build test
 
@@ -19,8 +30,12 @@ clean:
 	rm -rf $(BIN) $(DIST)
 
 deps:
-	GO15VENDOREXPERIMENT=1 go get github.com/govend/govend
-	GO15VENDOREXPERIMENT=1 govend -v
+	go get -u github.com/golang/lint/golint
+	go get -u github.com/govend/govend
+	govend -v
+
+vendor:
+	govend -vtlu
 
 fmt:
 	go fmt $(PACKAGES)
@@ -28,29 +43,38 @@ fmt:
 vet:
 	go vet $(PACKAGES)
 
-build: $(BIN)/$(EXECUTABLE)
+lint:
+	for PKG in $(PACKAGES); do golint $$PKG || exit 1; done;
 
 test:
-	@for PKG in $(PACKAGES); do GO15VENDOREXPERIMENT=1 go test -cover -coverprofile $$GOPATH/src/$$PKG/coverage.out $$PKG || exit 1; done;
+	for PKG in $(PACKAGES); do go test -cover -coverprofile $$GOPATH/src/$$PKG/coverage.out $$PKG || exit 1; done;
+
+build: $(BIN)/$(EXECUTABLE)
 
 release: $(RELEASES)
+
+updater:
+	go get -u github.com/sanbornm/go-selfupdate
+	go-selfupdate -o $(DIST)/publish $(DIST)/updater $(VERSION)
 
 install: $(BIN)/$(EXECUTABLE)
 	cp $< $(GOPATH)/bin/
 
 $(BIN)/$(EXECUTABLE): $(wildcard *.go)
-	GO15VENDOREXPERIMENT=1 CGO_ENABLED=0 go build -ldflags '-s -w $(LDFLAGS)' -o $@
+	CGO_ENABLED=0 go build -ldflags '-s -w $(LDFLAGS)' -o $@
 
-$(BIN)/%/$(EXECUTABLE): GOOS=$(firstword $(subst -, ,$*))
-$(BIN)/%/$(EXECUTABLE): GOARCH=$(subst .exe,,$(word 2,$(subst -, ,$*)))
-$(BIN)/%/$(EXECUTABLE):
-	GO15VENDOREXPERIMENT=1 CGO_ENABLED=0 GOOS=$(GOOS) GOARCH=$(GOARCH) go build -ldflags '-s -w $(LDFLAGS)' -o $@
+$(BIN)/$(EXECUTABLE)-%: GOOS=$(word 1,$(subst -, ,$*))
+$(BIN)/$(EXECUTABLE)-%: GOARCH=$(subst .exe,,$(word 2,$(subst -, ,$*)))
+$(BIN)/$(EXECUTABLE)-%:
+	CGO_ENABLED=0 GOOS=$(GOOS) GOARCH=$(GOARCH) go build -ldflags '-s -w $(LDFLAGS)' -o $@
+	mkdir -p $(DIST)/updater
+	cp $@ $(DIST)/updater/$(GOOS)-$(GOARCH)
+	mkdir -p $(DIST)/release
+	cp $@ $(DIST)/release/$(EXECUTABLE)-$(VERSION)-$(GOOS)-$(GOARCH)
+	cd $(DIST)/release && sha256sum $(EXECUTABLE)-$(VERSION)-$(GOOS)-$(GOARCH) > $(EXECUTABLE)-$(VERSION)-$(GOOS)-$(GOARCH).sha256
+	mkdir -p $(DIST)/latest
+	cp $@ $(DIST)/latest/$(EXECUTABLE)-latest-$(GOOS)-$(GOARCH)
+	cd $(DIST)/latest && sha256sum $(EXECUTABLE)-latest-$(GOOS)-$(GOARCH) > $(EXECUTABLE)-latest-$(GOOS)-$(GOARCH).sha256
 
-$(DIST)/$(EXECUTABLE)-%: GOOS=$(firstword $(subst -, ,$*))
-$(DIST)/$(EXECUTABLE)-%: GOARCH=$(subst .exe,,$(word 2,$(subst -, ,$*)))
-$(DIST)/$(EXECUTABLE)-%: $(BIN)/%/$(EXECUTABLE)
-	mkdir -p $(DIST)
-	cp $(BIN)/$*/$(EXECUTABLE) $(DIST)/$(EXECUTABLE)-$(VERSION)-$(GOOS)-$(GOARCH)
-
-.PHONY: all clean deps fmt vet build test
-.PRECIOUS: $(BIN)/%/$(EXECUTABLE)
+.PHONY: all clean deps vendor fmt vet lint test build updater install
+.PRECIOUS: $(BIN)/$(EXECUTABLE)-%

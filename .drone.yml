@@ -1,54 +1,64 @@
-clone:
-  path: github.com/webhippie/mygithub
-
 build:
-  testing:
-    image: golang:1.5
+  general:
+    image: webhippie/golang:latest
     commands:
+      - make clean
       - make deps
       - make build
       - make test
-
-  release:
-    image: golang:1.5
-    commands:
       - make release
+
+  updater:
+    image: webhippie/golang:latest
+      - make updater
     when:
       event: tag
 
 publish:
   coverage:
+    server: http://coverage.dronehippie.de
+    token: $$GITHUB_APIKEY
     when:
       branch: master
+
+  rsync:
+    user: deploy
+    host: dl.webhippie.de
+    source: dist/release/
+    target: $$BASE_PATH/mygithub/master
+    recursive: true
+    delete: true
+    when:
+      branch: master
+
+  rsync:
+    user: deploy
+    host: dl.webhippie.de
+    source: dist/release/
+    target: $$BASE_PATH/mygithub/$$TAG
+    recursive: true
+    delete: true
+    when:
+      event: tag
+
+  rsync:
+    user: deploy
+    host: dl.webhippie.de
+    source: dist/latest/
+    target: $$BASE_PATH/mygithub/latest
+    recursive: true
+    delete: true
+    when:
+      event: tag
+
   github_release:
     api_key: $$GITHUB_APIKEY
     files:
-      - dist/*
+      - dist/release/*
     when:
       event: tag
 
 notify:
-  slack:
-    webhook_url: $$SLACK_WEBHOOK
-    channel: develop
-    username: hippie
-    when:
-      success: false
-      failure: true
-      change: true
-
-  irc:
-    prefix: build
-    nick: hippie
-    channel: webhippie
-    server:
-      host: chat.freenode.net
-      port: 6667
-    when:
-      success: false
-      failure: true
-      change: true
-
   email:
     from: drone@webhippie.de
     host: $$EMAIL_HOST
