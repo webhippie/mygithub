@@ -17,8 +17,10 @@ cases.
 You can download prebuilt binaries from the GitHub releases or from our
 [download site](http://dl.webhippie.de/mygithub). You are a Mac user? Just take
 a look at our [homebrew formula](https://github.com/webhippie/homebrew-webhippie).
-Take a look at the help output, you can enable auto updates to the binary to
-avoid bugs related to old versions. If you find a security issue please contact
+If you are missing an architecture just write us on our nice
+[Gitter](https://gitter.im/webhippie/general) chat. Take a look at the help
+output, per default we enabled an auto updater for the binary to avoid bugs
+related to old versions. If you find a security issue please contact
 thomas@webhippie.de first.
 
 
