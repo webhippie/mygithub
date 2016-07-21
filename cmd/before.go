@@ -11,7 +11,7 @@ import (
 )
 
 // Before gets called before any action on every execution.
-func Before() BeforeFunc {
+func Before() cli.BeforeFunc {
 	return func(c *cli.Context) error {
 		logrus.SetOutput(os.Stdout)
 		logrus.SetLevel(logrus.DebugLevel)

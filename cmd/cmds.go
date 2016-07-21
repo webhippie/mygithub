@@ -28,7 +28,7 @@ func Commands() []cli.Command {
 					},
 				}
 
-				var repos []github.Repository
+				var repos []*github.Repository
 
 				for {
 					paged, response, err := config.Client.Repositories.List(c.Args().First(), opt)
