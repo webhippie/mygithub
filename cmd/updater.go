@@ -9,9 +9,10 @@ import (
 )
 
 var (
-	updates string = "http://dl.webhippie.de/"
+	updates = "http://dl.webhippie.de/"
 )
 
+// Update handles the automated backup process in the background.
 func Update() {
 	if config.VersionDev == "dev" {
 		fmt.Fprintf(os.Stderr, "Updates are disabled for development versions.\n")

@@ -10,6 +10,7 @@ import (
 	"golang.org/x/oauth2"
 )
 
+// Before gets called before any action on every execution.
 func Before() BeforeFunc {
 	return func(c *cli.Context) error {
 		logrus.SetOutput(os.Stdout)

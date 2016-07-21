@@ -8,6 +8,7 @@ import (
 	"github.com/webhippie/mygithub/config"
 )
 
+// Commands defines all available sub-commands for this tool.
 func Commands() []cli.Command {
 	return []cli.Command{
 		{

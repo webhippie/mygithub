@@ -5,6 +5,7 @@
 * ENHANCEMENT
   * Optimized build process
   * Integrated vendoring
+  * Made the go linter happy
 
 ## [0.1.0](https://github.com/webhippie/mygithub/releases/tag/v0.1.0) - 2016-04-18
 
