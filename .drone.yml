@@ -1,83 +1,91 @@
-build:
-  general:
+workspace:
+  base: /srv/app
+  path: src/github.com/webhippie/mygithub
+
+pipeline:
+  testing:
     image: webhippie/golang:latest
+    pull: true
+    environment:
+      - GOPATH=/srv/app
     commands:
       - make clean
       - make deps
-      - make build
+      - make vet
+      - make lint
       - make test
-      - make release
+      - make build
 
   updater:
     image: webhippie/golang:latest
+    environment:
+      - GOPATH=/srv/app
     commands:
-      - make updater
+      - make publish
     when:
-      event: tag
+      event: [ push, tag ]
+      branch: [ master, refs/tags/* ]
 
-publish:
-  coverage:
-    server: http://coverage.dronehippie.de
-    token: $$GITHUB_APIKEY
-    when:
-      branch: master
+  # coverage:
+  #   image: plugins/coverage
 
-  rsync:
-    user: deploy
-    host: dl.webhippie.de
-    source: dist/release/
-    target: $$BASE_PATH/mygithub/master
-    recursive: true
-    delete: true
-    when:
-      branch: master
+  # rsync:
+  #   image: plugins/rsync
+  #   user: deploy
+  #   host: dl.webhippie.de
+  #   source: dist/release/
+  #   target: /usr/share/webapps/dl/public_html/mygithub/master
+  #   recursive: true
+  #   delete: true
+  #   when:
+  #     event: push
+  #     branch: master
 
-  rsync:
-    user: deploy
-    host: dl.webhippie.de
-    source: dist/release/
-    target: $$BASE_PATH/mygithub/$$TAG
-    recursive: true
-    delete: true
-    when:
-      event: tag
+  # rsync:
+  #   image: plugins/rsync
+  #   user: deploy
+  #   host: dl.webhippie.de
+  #   source: dist/release/
+  #   target: /usr/share/webapps/dl/public_html/mygithub/$$TAG
+  #   recursive: true
+  #   delete: true
+  #   when:
+  #     event: tag
+  #     branch: refs/tags/*
 
-  rsync:
-    user: deploy
-    host: dl.webhippie.de
-    source: dist/latest/
-    target: $$BASE_PATH/mygithub/latest
-    recursive: true
-    delete: true
-    when:
-      event: tag
+  # rsync:
+  #   image: plugins/rsync
+  #   user: deploy
+  #   host: dl.webhippie.de
+  #   source: dist/latest/
+  #   target: /usr/share/webapps/dl/public_html/mygithub/latest
+  #   recursive: true
+  #   delete: true
+  #   when:
+  #     event: tag
+  #     branch: refs/tags/*
 
-  rsync:
-    user: deploy
-    host: dl.webhippie.de
-    source: dist/publish/
-    target: $$BASE_PATH/mygithub/updates
-    recursive: true
-    delete: true
-    when:
-      event: tag
+  # rsync:
+  #   image: plugins/rsync
+  #   user: deploy
+  #   host: dl.webhippie.de
+  #   source: dist/publish/
+  #   target: /usr/share/webapps/dl/public_html/mygithub/updates
+  #   recursive: true
+  #   delete: false
+  #   when:
+  #     event: tag
+  #     branch: refs/tags/*
 
-  github_release:
-    api_key: $$GITHUB_APIKEY
-    files:
-      - dist/release/*
-    when:
-      event: tag
+  # github_release:
+  #   image: plugins/github-release
+  #   files:
+  #     - dist/release/*
+  #   when:
+  #     event: tag
+  #     branch: refs/tags/*
 
-notify:
-  email:
-    from: drone@webhippie.de
-    host: $$EMAIL_HOST
-    username: $$EMAIL_USERNAME
-    password: $$EMAIL_PASSWORD
-    recipients:
-      - thomas@webhippie.de
-    when:
-      success: false
-      failure: true
-      change: true
+  # email:
+  #   from: drone@webhippie.de
+  #   recipients:
+  #     - thomas@webhippie.de

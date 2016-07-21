@@ -12,7 +12,7 @@ var (
 	VersionMinor = 1
 
 	// VersionPatch is the current patch version
-	VersionPatch = 0
+	VersionPatch = 1
 
 	// VersionDev indicates the current commit
 	VersionDev = "dev"

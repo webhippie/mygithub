@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.1](https://github.com/webhippie/mygithub/releases/tag/v0.1.1) - 2016-07-21
+
+* ENHANCEMENT
+  * Optimized build process
+  * Integrated vendoring
+
 ## [0.1.0](https://github.com/webhippie/mygithub/releases/tag/v0.1.0) - 2016-04-18
 
 * ENHANCEMENT

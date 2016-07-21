@@ -1,33 +1,27 @@
 vendors:
 - path: github.com/Sirupsen/logrus
-  rev: 081307d9bc1364753142d5962fc1d795c742baaf
+  rev: a283a10442df8dc09befd873fab202bf8a253d6a
 - path: github.com/codegangsta/cli
-  rev: 71f57d300dd6a780ac1856c005c4b518cfd498ec
-- path: github.com/davecgh/go-spew
-  rev: 5215b55f46b2b919f50a1df0eaa5886afe4e3b3d
+  rev: 11c134509d89c2018675f369955218a180dc7428
 - path: github.com/golang/protobuf
-  rev: f0a097ddac24fb00e07d2ac17f8671423f3ea47c
+  rev: 874264fbbb43f4d91e999fecb4b40143ed611400
 - path: github.com/google/go-github
-  rev: f8cebc8ad645ff0e5df4ffc1059f644c3cb99b1c
+  rev: b5e5babef39c18002f177a134fc49dc5013374ba
 - path: github.com/google/go-querystring
   rev: 9235644dd9e52eeae6fa48efd539fdc351a0af53
 - path: github.com/kardianos/osext
   rev: 29ae4ffbc9a6fe9fb2bc5029050ce6996ea1d3bc
 - path: github.com/kr/binarydist
-  rev: 9955b0ab8708602d411341e55fffd7e0700f86bd
-- path: github.com/pmezard/go-difflib
-  rev: 792786c7400a136282c1664665ae0a8db921c6c2
+  rev: 3035450ff8b987ec4373f65c40767f096b35f2d2
 - path: github.com/sanbornm/go-selfupdate
-  rev: 333a93f08e13e4389fb21bfa530140fc0b884582
-- path: github.com/stretchr/testify
-  rev: bcd9e3389dd03b0b668d11f4d462a6af6c2dfd60
+  rev: 8d409ca53a740932c8e3a6cd1d8ea4c111f5e539
 - path: golang.org/x/net
-  rev: fb93926129b8ec0056f2f458b1f519654814edf0
+  rev: 4d38db76854b199960801a1734443fd02870d7e1
 - path: golang.org/x/oauth2
-  rev: 7e9cd5d59563851383f8f81a7fbb01213709387c
+  rev: 12e1e986157ec46fb273824565d9937bd4235105
 - path: golang.org/x/sys
-  rev: f64b50fbea64174967a8882830d621a18ee1548e
+  rev: a646d33e2ee3172a661fc09bca23bb4889a41bc8
 - path: google.golang.org/appengine
-  rev: e234e71924d4aa52444bc76f2f831f13fa1eca60
+  rev: 267c27e7492265b84fc6719503b14a1e17975d79
 - path: gopkg.in/inconshreveable/go-update.v0
   rev: d8b0b1d421aa1cbf392c05869f8abbc669bb7066
