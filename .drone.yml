@@ -28,10 +28,38 @@ pipeline:
       - TAGS=
       - GOPATH=/srv/app
     commands:
+      - export PATH=/srv/app/bin:$PATH
       - make publish
     when:
       event: [ push, tag ]
       branch: [ master, refs/tags/* ]
+
+  docker:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    repo: tboerger/mygithub
+    tags: [ '${DRONE_TAG##v}' ]
+    when:
+      event: [ tag ]
+      branch: [ refs/tags/* ]
+
+  docker:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    repo: tboerger/mygithub
+    tags: [ '${DRONE_BRANCH##release/v}' ]
+    when:
+      event: [ push ]
+      branch: [ release/* ]
+
+  docker:
+    image: plugins/docker
+    secrets: [ docker_username, docker_password ]
+    repo: tboerger/mygithub
+    tags: [ 'latest' ]
+    when:
+      event: [ push ]
+      branch: [ master ]
 
   archive:
     image: plugins/s3
