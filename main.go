@@ -3,6 +3,7 @@ package main
 import (
 	"os"
 	"runtime"
+	"time"
 
 	"github.com/joho/godotenv"
 	"github.com/webhippie/mygithub/cmd"

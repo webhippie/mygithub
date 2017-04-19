@@ -4,10 +4,11 @@ import (
 	"os"
 
 	"github.com/Sirupsen/logrus"
-	"github.com/codegangsta/cli"
 	"github.com/google/go-github/github"
 	"github.com/webhippie/mygithub/config"
+	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
+	"gopkg.in/urfave/cli.v2"
 )
 
 // Before gets called before any action on every execution.
@@ -16,14 +17,16 @@ func Before() cli.BeforeFunc {
 		logrus.SetOutput(os.Stdout)
 		logrus.SetLevel(logrus.DebugLevel)
 
-		if c.BoolT("update") {
+		if c.Bool("update") {
 			Update()
 		}
+
+		config.Context = context.Background()
 
 		if config.Token != "" {
 			config.Client = github.NewClient(
 				oauth2.NewClient(
-					oauth2.NoContext,
+					config.Context,
 					oauth2.StaticTokenSource(
 						&oauth2.Token{
 							AccessToken: config.Token,

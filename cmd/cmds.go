@@ -3,23 +3,22 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/codegangsta/cli"
 	"github.com/google/go-github/github"
 	"github.com/webhippie/mygithub/config"
+	"gopkg.in/urfave/cli.v2"
 )
 
 // Commands defines all available sub-commands for this tool.
-func Commands() []cli.Command {
-	return []cli.Command{
+func Commands() []*cli.Command {
+	return []*cli.Command{
 		{
 			Name:      "list",
 			Aliases:   []string{"l"},
 			Usage:     "List available repositories",
 			ArgsUsage: "<user/org>",
-			Action: func(c *cli.Context) {
-				if len(c.Args()) < 1 {
-					fmt.Println("Please provide a username or org")
-					return
+			Action: func(c *cli.Context) error {
+				if c.Args().Len() < 1 {
+					return fmt.Errorf("Please provide a username or org")
 				}
 
 				opt := &github.RepositoryListOptions{
@@ -31,11 +30,10 @@ func Commands() []cli.Command {
 				var repos []*github.Repository
 
 				for {
-					paged, response, err := config.Client.Repositories.List(c.Args().First(), opt)
+					paged, response, err := config.Client.Repositories.List(config.Context, c.Args().First(), opt)
 
 					if err != nil {
-						fmt.Println(err)
-						return
+						return err
 					}
 
 					repos = append(repos, paged...)
@@ -50,6 +48,8 @@ func Commands() []cli.Command {
 				for _, repo := range repos {
 					fmt.Println(*repo.Name)
 				}
+
+				return nil
 			},
 		},
 	}
