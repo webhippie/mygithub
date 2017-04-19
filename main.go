@@ -2,43 +2,53 @@ package main
 
 import (
 	"os"
+	"runtime"
 
-	"github.com/codegangsta/cli"
+	"github.com/joho/godotenv"
 	"github.com/webhippie/mygithub/cmd"
 	"github.com/webhippie/mygithub/config"
-)
-
-var (
-	version    string
-	versionSha string
+	"gopkg.in/urfave/cli.v2"
 )
 
 func main() {
-	app := cli.NewApp()
-	app.Name = "mygithub"
-	app.Version = config.Version
-	app.Usage = "Some tiny GitHub client utilities for daily work"
-	app.ArgsUsage = ""
+	runtime.GOMAXPROCS(runtime.NumCPU())
 
-	app.Authors = []cli.Author{
-		{"Thomas Boerger", "thomas@webhippie.de"},
+	if env := os.Getenv("MYGITHUB_ENV_FILE"); env != "" {
+		godotenv.Load(env)
 	}
 
-	app.HideHelp = false
+	app := &cli.App{
+		Name:      "mygithub",
+		Version:   config.Version,
+		Usage:     "Some tiny GitHub client utilities for daily work",
+		Compiled:  time.Now(),
+		ArgsUsage: "",
 
-	app.Before = cmd.Before()
-	app.Flags = cmd.Flags()
-	app.Commands = cmd.Commands()
+		Authors: []*cli.Author{
+			{
+				Name:  "Thomas Boerger",
+				Email: "thomas@webhippie.de",
+			},
+		},
 
-	cli.HelpFlag = cli.BoolFlag{
-		Name:  "help, h",
-		Usage: "Show the help, so what you see now",
+		Flags:    cmd.Flags(),
+		Before:   cmd.Before(),
+		Commands: cmd.Commands(),
 	}
 
-	cli.VersionFlag = cli.BoolFlag{
-		Name:  "version, v",
-		Usage: "Print the current version of that tool",
+	cli.HelpFlag = &cli.BoolFlag{
+		Name:    "help",
+		Aliases: []string{"h"},
+		Usage:   "Show the help, so what you see now",
 	}
 
-	app.Run(os.Args)
+	cli.VersionFlag = &cli.BoolFlag{
+		Name:    "version",
+		Aliases: []string{"v"},
+		Usage:   "Print the current version of that tool",
+	}
+
+	if err := app.Run(os.Args); err != nil {
+		os.Exit(1)
+	}
 }

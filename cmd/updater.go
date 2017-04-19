@@ -9,7 +9,7 @@ import (
 )
 
 var (
-	updates = "http://dl.webhippie.de/"
+	updates = "http://dl.webhippie.de/misc/"
 )
 
 // Update handles the automated backup process in the background.
