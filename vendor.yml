@@ -1,27 +1,31 @@
 vendors:
 - path: github.com/Sirupsen/logrus
-  rev: a283a10442df8dc09befd873fab202bf8a253d6a
+  rev: 10f801ebc38b33738c9d17d50860f484a0988ff5
 - path: github.com/codegangsta/cli
-  rev: 11c134509d89c2018675f369955218a180dc7428
+  rev: 8ba6f23b6e36d03666a14bd9421f5e3efcb59aca
 - path: github.com/golang/protobuf
-  rev: 874264fbbb43f4d91e999fecb4b40143ed611400
+  rev: 2bba0603135d7d7f5cb73b2125beeda19c09f4ef
 - path: github.com/google/go-github
-  rev: b5e5babef39c18002f177a134fc49dc5013374ba
+  rev: de33c46a823d3f723514fc5333b75ef2e937b7df
 - path: github.com/google/go-querystring
-  rev: 9235644dd9e52eeae6fa48efd539fdc351a0af53
+  rev: 53e6ce116135b80d037921a7fdd5138cf32d7a8a
+- path: github.com/joho/godotenv
+  rev: 325433c502d409f3c3dc820098fb0cfe38d98dc7
 - path: github.com/kardianos/osext
-  rev: 29ae4ffbc9a6fe9fb2bc5029050ce6996ea1d3bc
+  rev: 9d302b58e975387d0b4d9be876622c86cefe64be
 - path: github.com/kr/binarydist
   rev: 3035450ff8b987ec4373f65c40767f096b35f2d2
 - path: github.com/sanbornm/go-selfupdate
-  rev: 8d409ca53a740932c8e3a6cd1d8ea4c111f5e539
+  rev: bf295275fb1ee4e347c09330ed9a3c76cc19895a
 - path: golang.org/x/net
-  rev: 4d38db76854b199960801a1734443fd02870d7e1
+  rev: 5602c733f70afc6dcec6766be0d5034d4c4f14de
 - path: golang.org/x/oauth2
-  rev: 12e1e986157ec46fb273824565d9937bd4235105
+  rev: a6bd8cefa1811bd24b86f8902872e4e8225f74c4
 - path: golang.org/x/sys
-  rev: a646d33e2ee3172a661fc09bca23bb4889a41bc8
+  rev: f3918c30c5c2cb527c0b071a27c35120a6c0719a
 - path: google.golang.org/appengine
-  rev: 267c27e7492265b84fc6719503b14a1e17975d79
+  rev: 170382fa85b10b94728989dfcf6cc818b335c952
 - path: gopkg.in/inconshreveable/go-update.v0
   rev: d8b0b1d421aa1cbf392c05869f8abbc669bb7066
+- path: gopkg.in/urfave/cli.v2
+  rev: 922e3e2ceaaa1831c859679af772dcd534095119

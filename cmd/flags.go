@@ -1,23 +1,24 @@
 package cmd
 
 import (
-	"github.com/codegangsta/cli"
 	"github.com/webhippie/mygithub/config"
+	"gopkg.in/urfave/cli.v2"
 )
 
 // Flags defines all available flags for this command.
 func Flags() []cli.Flag {
 	return []cli.Flag{
-		cli.BoolTFlag{
+		&cli.BoolFlag{
 			Name:        "update, u",
+			Value:       true,
 			Usage:       "Enable auto updates",
-			EnvVar:      "MYGITHUB_UPDATE",
+			EnvVars:     []string{"MYGITHUB_UPDATE"},
 			Destination: &config.Update,
 		},
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:        "token, t",
 			Usage:       "GitHub access token",
-			EnvVar:      "MYGITHUB_TOKEN",
+			EnvVars:     []string{"MYGITHUB_TOKEN"},
 			Destination: &config.Token,
 			Value:       "",
 		},
