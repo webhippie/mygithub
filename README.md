@@ -25,7 +25,7 @@ Make sure you have a working Go environment, for further reference or a guide ta
 ```bash
 go get -d github.com/webhippie/mygithub
 cd $GOPATH/src/github.com/webhippie/mygithub
-make clean generate build
+make clean retool sync generate build
 
 ./mygithub -h
 ```
