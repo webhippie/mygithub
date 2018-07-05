@@ -25,6 +25,9 @@ _testmain.go
 
 coverage.out
 
-.env
+/_tools
+/vendor
+/bin
 /dist
-/mygithub
+
+.env
