@@ -1,0 +1,15 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "MyGitHub"
+
+[blackfriday]
+  angledQuotes = true
+  fractions = false
+  plainIDAnchors = true
+  smartlists = true
+  extensions = ["hardLineBreak"]
+
+[params]
+  author = "Thomas Boerger"
+  description = "Some tiny GitHub client utilities for daily work"
+  keywords = "github, helper, utilities"

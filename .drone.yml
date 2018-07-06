@@ -233,6 +233,25 @@ pipeline:
       local: false
       event: [ push ]
 
+  docs-build:
+    image: webhippie/hugo:latest
+    pull: true
+    commands:
+      - make docs
+    when:
+      local: false
+      event: [ push ]
+
+  docs-publish:
+    image: plugins/gh-pages:1
+    pull: true
+    secrets: [ github_username, github_password ]
+    pages_directory: docs/public/
+    temporary_base: tmp/
+    when:
+      local: false
+      event: [ push ]
+
   archive-release:
     image: plugins/s3:1
     pull: true
