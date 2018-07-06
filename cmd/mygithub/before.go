@@ -1,11 +1,11 @@
 package main
 
 import (
-	"os"
 	"context"
+	"os"
 
-	"github.com/sirupsen/logrus"
 	"github.com/google/go-github/github"
+	"github.com/sirupsen/logrus"
 	"github.com/webhippie/mygithub/pkg/config"
 	"golang.org/x/oauth2"
 	"gopkg.in/urfave/cli.v2"
