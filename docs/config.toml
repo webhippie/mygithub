@@ -1,6 +1,10 @@
 baseURL = "https://webhippie.github.io/mygithub/"
 languageCode = "en-us"
 title = "MyGitHub"
+pygmentsUseClasses = true
+
+[markup.goldmark.renderer]
+  unsafe = true
 
 [blackfriday]
   angledQuotes = true
@@ -12,4 +16,4 @@ title = "MyGitHub"
 [params]
   author = "Thomas Boerger"
   description = "Some tiny GitHub client utilities for daily work"
-  keywords = "github, helper, utilities"
+  keywords = "github, cli, client, commands"
