@@ -1,17 +1,24 @@
 package config
 
-import (
-	"github.com/google/go-github/github"
-	"golang.org/x/net/context"
-)
+// GitHub defines the github configuration.
+type GitHub struct {
+	Token string `mapstructure:"token"`
+}
 
-var (
-	// Token defines the GitHub API token to avoid API blocks.
-	Token string
+// Logs defines the level and color for log configuration.
+type Logs struct {
+	Level  string `mapstructure:"level"`
+	Pretty bool   `mapstructure:"pretty"`
+	Color  bool   `mapstructure:"color"`
+}
 
-	// Client represents the current GitHub API client.
-	Client *github.Client
+// Config defines the general configuration.
+type Config struct {
+	GitHub GitHub `mapstructure:"github"`
+	Logs   Logs   `mapstructure:"log"`
+}
 
-	// Context is used for the GitHub API request, required by the client.
-	Context context.Context
-)
+// Load initializes a default configuration struct.
+func Load() *Config {
+	return &Config{}
+}

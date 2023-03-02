@@ -1,0 +1,10 @@
+{
+    "github": {
+        "token": "your-github-token"
+    },
+    "log": {
+        "level": "info",
+        "pretty": true,
+        "color": true
+    }
+}

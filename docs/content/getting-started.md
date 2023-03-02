@@ -44,6 +44,14 @@ MYGITHUB_LOG_COLOR
 MYGITHUB_LOG_PRETTY
 : Enable pretty logging, defaults to `true`
 
+MYGITHUB_TOKEN
+: Token to access the GitHub API
+
+#### List
+
+MYGITHUB_LIST_FORMAT
+: Output format, could be emtpy, `name` or `json`
+
 ### Commandline flags
 
 If you prefer to configure the service with commandline flags you can see the
@@ -59,6 +67,14 @@ available variables below.
 
 --log-pretty
 : Enable pretty logging, defaults to `true`
+
+--token
+: Token to access the GitHub API
+
+#### List
+
+--format
+: Output format, could be emtpy, `name` or `json`
 
 ### Configuration file
 
