@@ -1,0 +1,12 @@
+FROM i386/alpine:3.15 AS build
+RUN apk add --no-cache ca-certificates mailcap
+
+FROM scratch
+
+ENTRYPOINT ["/usr/bin/mygithub"]
+CMD ["help"]
+
+COPY --from=build /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+COPY --from=build /etc/mime.types /etc/
+
+COPY bin/mygithub /usr/bin/mygithub
