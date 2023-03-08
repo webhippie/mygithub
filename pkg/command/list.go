@@ -16,8 +16,14 @@ var (
 		Use:     "list [name]",
 		Aliases: []string{"l"},
 		Short:   "List available repositories",
-		Args:    cobra.ExactArgs(1),
 		Run:     listAction,
+		Args: func(cmd *cobra.Command, args []string) error {
+			if len(args) != 1 {
+				return fmt.Errorf("missing name argument")
+			}
+
+			return nil
+		},
 	}
 )
 
