@@ -6,7 +6,7 @@ require (
 	github.com/google/go-github/v50 v50.2.0
 	github.com/joho/godotenv v1.5.1
 	github.com/rs/zerolog v1.29.0
-	github.com/spf13/cobra v1.6.1
+	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.15.0
 	github.com/stretchr/testify v1.8.2
 	golang.org/x/oauth2 v0.6.0
