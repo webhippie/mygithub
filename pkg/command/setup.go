@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/google/go-github/v51/github"
+	"github.com/google/go-github/v52/github"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
