@@ -5,7 +5,7 @@ go 1.19
 require (
 	github.com/google/go-github/v53 v53.2.0
 	github.com/joho/godotenv v1.5.1
-	github.com/rs/zerolog v1.29.1
+	github.com/rs/zerolog v1.30.0
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.16.0
 	github.com/stretchr/testify v1.8.4
