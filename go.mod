@@ -3,7 +3,7 @@ module github.com/webhippie/mygithub
 go 1.19
 
 require (
-	github.com/google/go-github/v54 v54.0.0
+	github.com/google/go-github/v55 v55.0.0
 	github.com/joho/godotenv v1.5.1
 	github.com/rs/zerolog v1.30.0
 	github.com/spf13/cobra v1.7.0
