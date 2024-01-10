@@ -98,7 +98,7 @@ func Client(ctx context.Context) *github.Client {
 			ctx,
 			oauth2.StaticTokenSource(
 				&oauth2.Token{
-					AccessToken: viper.GetString("token"),
+					AccessToken: viper.GetString("github.token"),
 				},
 			),
 		),

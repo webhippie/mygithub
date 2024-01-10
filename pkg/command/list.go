@@ -38,7 +38,7 @@ func init() {
 func listAction(ccmd *cobra.Command, args []string) {
 	client := Client(ccmd.Context())
 
-	opt := &github.RepositoryListOptions{
+	opt := &github.RepositoryListByUserOptions{
 		ListOptions: github.ListOptions{
 			PerPage: 50,
 		},
@@ -47,7 +47,7 @@ func listAction(ccmd *cobra.Command, args []string) {
 	var repos []*github.Repository
 
 	for {
-		paged, response, err := client.Repositories.List(
+		paged, response, err := client.Repositories.ListByUser(
 			ccmd.Context(),
 			args[0],
 			opt,
