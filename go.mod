@@ -1,9 +1,11 @@
 module github.com/webhippie/mygithub
 
-go 1.19
+go 1.21
+
+toolchain go1.22.0
 
 require (
-	github.com/google/go-github/v59 v59.0.0
+	github.com/google/go-github/v60 v60.0.0
 	github.com/joho/godotenv v1.5.1
 	github.com/rs/zerolog v1.32.0
 	github.com/spf13/cobra v1.8.0
