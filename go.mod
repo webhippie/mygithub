@@ -2,8 +2,6 @@ module github.com/webhippie/mygithub
 
 go 1.23.0
 
-toolchain go1.23.0
-
 require (
 	github.com/google/go-github/v64 v64.0.0
 	github.com/joho/godotenv v1.5.1
