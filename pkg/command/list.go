@@ -32,7 +32,7 @@ func init() {
 
 	listCmd.PersistentFlags().String("format", "", "Output format")
 	viper.SetDefault("list.format", "")
-	viper.BindPFlag("list.format", listCmd.PersistentFlags().Lookup("format"))
+	_ = viper.BindPFlag("list.format", listCmd.PersistentFlags().Lookup("format"))
 }
 
 func listAction(ccmd *cobra.Command, args []string) {
@@ -67,7 +67,7 @@ func listAction(ccmd *cobra.Command, args []string) {
 			break
 		}
 
-		opt.ListOptions.Page = response.NextPage
+		opt.Page = response.NextPage
 	}
 
 	switch format := viper.GetString("list.format"); format {
