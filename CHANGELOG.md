@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.0](https://github.com/webhippie/mygithub/compare/v2.1.0...v3.0.0) (2025-09-29)
+
+
+### Features
+
+* **major:** update module github.com/google/go-github/v74 to v75 ([#167](https://github.com/webhippie/mygithub/issues/167)) ([bd12e91](https://github.com/webhippie/mygithub/commit/bd12e91c46b42d609a9c98b27f9ecf28ebbf24d9))
+
 ## [2.1.0](https://github.com/webhippie/mygithub/compare/v2.0.0...v2.1.0) (2025-09-22)
 
 
