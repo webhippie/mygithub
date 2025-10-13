@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.1.0](https://github.com/webhippie/mygithub/compare/v3.0.0...v3.1.0) (2025-10-13)
+
+
+### Features
+
+* **minor:** update module golang.org/x/oauth2 to v0.32.0 ([#172](https://github.com/webhippie/mygithub/issues/172)) ([66ca37d](https://github.com/webhippie/mygithub/commit/66ca37d0ac02b9a4d5fe4a860c7c5afaa46a8acb))
+
+
+### Bugfixes
+
+* **deps:** update docker digests ([#173](https://github.com/webhippie/mygithub/issues/173)) ([8ca7b2f](https://github.com/webhippie/mygithub/commit/8ca7b2fa159d595bc32ce951810722f175900545))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 0134653 ([#176](https://github.com/webhippie/mygithub/issues/176)) ([bbea5bb](https://github.com/webhippie/mygithub/commit/bbea5bb05eeecf1485a11de2c80ff4c9755a6cc1))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 0ae17b3 ([#178](https://github.com/webhippie/mygithub/issues/178)) ([ff26724](https://github.com/webhippie/mygithub/commit/ff2672430ac195388d6ecd68a7264df7c370a61d))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to 7300a8d ([#175](https://github.com/webhippie/mygithub/issues/175)) ([743332a](https://github.com/webhippie/mygithub/commit/743332a8f43409e29c8e9bafa6dcbef10ed6fb73))
+* **deps:** update golang:1.25.2-alpine3.21 docker digest to e51523f ([#174](https://github.com/webhippie/mygithub/issues/174)) ([70e6ead](https://github.com/webhippie/mygithub/commit/70e6ead5cd023773c454c888adefd183071bbe89))
+* **patch:** update golang docker tag to v1.25.2 ([#171](https://github.com/webhippie/mygithub/issues/171)) ([efd0124](https://github.com/webhippie/mygithub/commit/efd0124125131bde368fa75b1602ad9822225fb1))
+
 ## [3.0.0](https://github.com/webhippie/mygithub/compare/v2.1.0...v3.0.0) (2025-09-29)
 
 
