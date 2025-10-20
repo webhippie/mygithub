@@ -1,5 +1,18 @@
 # Changelog
 
+## [4.0.0](https://github.com/webhippie/mygithub/compare/v3.1.0...v4.0.0) (2025-10-20)
+
+
+### Features
+
+* **major:** update module github.com/google/go-github/v75 to v76 ([#183](https://github.com/webhippie/mygithub/issues/183)) ([656cd68](https://github.com/webhippie/mygithub/commit/656cd681bda7708df2cf8757a6acd84346cdde74))
+
+
+### Bugfixes
+
+* **deps:** update golang:1.25.3-alpine3.21 docker digest to 0c9f3e0 ([#185](https://github.com/webhippie/mygithub/issues/185)) ([2ec75b6](https://github.com/webhippie/mygithub/commit/2ec75b6d15a5f13dc19f0b3b5ec9b354facea431))
+* **patch:** update golang docker tag to v1.25.3 ([#181](https://github.com/webhippie/mygithub/issues/181)) ([5c46fb9](https://github.com/webhippie/mygithub/commit/5c46fb9a37d8777c9ee002eb8a6f48637ad31bca))
+
 ## [3.1.0](https://github.com/webhippie/mygithub/compare/v3.0.0...v3.1.0) (2025-10-13)
 
 
