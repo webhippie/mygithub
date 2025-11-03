@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/webhippie/mygithub/compare/v4.0.0...v4.1.0) (2025-11-03)
+
+
+### Features
+
+* **minor:** update module github.com/golangci/golangci-lint/v2 to v2.6.0 ([#190](https://github.com/webhippie/mygithub/issues/190)) ([13e8bc3](https://github.com/webhippie/mygithub/commit/13e8bc30634d5de73d7dc3e5179ff24d8d23fdf6))
+
 ## [4.0.0](https://github.com/webhippie/mygithub/compare/v3.1.0...v4.0.0) (2025-10-20)
 
 
