@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/google/go-github/v76/github"
+	"github.com/google/go-github/v77/github"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
