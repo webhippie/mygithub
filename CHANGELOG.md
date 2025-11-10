@@ -1,5 +1,21 @@
 # Changelog
 
+## [5.0.0](https://github.com/webhippie/mygithub/compare/v4.1.0...v5.0.0) (2025-11-10)
+
+
+### Features
+
+* **major:** update module github.com/google/go-github/v76 to v77 ([#191](https://github.com/webhippie/mygithub/issues/191)) ([d4e6e6f](https://github.com/webhippie/mygithub/commit/d4e6e6ff1821873f41fc4c1fccd653f76e5c377e))
+* **major:** update module github.com/google/go-github/v77 to v78 ([#198](https://github.com/webhippie/mygithub/issues/198)) ([168df65](https://github.com/webhippie/mygithub/commit/168df65a209edb5a6598bce4f8f826e3601bbdde))
+* **minor:** update module golang.org/x/oauth2 to v0.33.0 ([#197](https://github.com/webhippie/mygithub/issues/197)) ([3961970](https://github.com/webhippie/mygithub/commit/3961970674180249998b238502a0646fdc2e7193))
+
+
+### Bugfixes
+
+* **deps:** update golang:1.25.4-alpine3.21 docker digest to 3289aac ([#196](https://github.com/webhippie/mygithub/issues/196)) ([058ab84](https://github.com/webhippie/mygithub/commit/058ab84d6c2ef935ed2443709cc5c8c3ae4b355f))
+* **patch:** update golang docker tag to v1.25.4 ([#195](https://github.com/webhippie/mygithub/issues/195)) ([3548058](https://github.com/webhippie/mygithub/commit/35480584b71948d868ac17f277673ce9626e9fd9))
+* **patch:** update module github.com/golangci/golangci-lint/v2 to v2.6.1 ([#192](https://github.com/webhippie/mygithub/issues/192)) ([2f921b5](https://github.com/webhippie/mygithub/commit/2f921b58e06ad3e50a6556c58bec3070b62c2732))
+
 ## [4.1.0](https://github.com/webhippie/mygithub/compare/v4.0.0...v4.1.0) (2025-11-03)
 
 
