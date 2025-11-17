@@ -1,5 +1,17 @@
 # Changelog
 
+## [6.0.0](https://github.com/webhippie/mygithub/compare/v5.0.0...v6.0.0) (2025-11-17)
+
+
+### Features
+
+* **major:** update module github.com/google/go-github/v78 to v79 ([#201](https://github.com/webhippie/mygithub/issues/201)) ([abbecbd](https://github.com/webhippie/mygithub/commit/abbecbd5ae2d307362e278ac79a27ea486319b2c))
+
+
+### Bugfixes
+
+* **patch:** update module github.com/golangci/golangci-lint/v2 to v2.6.2 ([#200](https://github.com/webhippie/mygithub/issues/200)) ([366036c](https://github.com/webhippie/mygithub/commit/366036c987d80608a960f6facf56d4354ebd8f63))
+
 ## [5.0.0](https://github.com/webhippie/mygithub/compare/v4.1.0...v5.0.0) (2025-11-10)
 
 
