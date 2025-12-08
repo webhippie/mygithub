@@ -1,5 +1,20 @@
 # Changelog
 
+## [7.0.0](https://github.com/webhippie/mygithub/compare/v6.0.0...v7.0.0) (2025-12-08)
+
+
+### Features
+
+* **major:** update module github.com/google/go-github/v79 to v80 ([#216](https://github.com/webhippie/mygithub/issues/216)) ([b788655](https://github.com/webhippie/mygithub/commit/b7886554e9d936887d02dcc1ac24aa64eea733e5))
+* **minor:** update alpine docker tag to v3.23 ([#214](https://github.com/webhippie/mygithub/issues/214)) ([53c2aa3](https://github.com/webhippie/mygithub/commit/53c2aa3fe72a25c6d29cea5cba5f8585d5cf87f6))
+* **minor:** update module github.com/golangci/golangci-lint/v2 to v2.7.0 ([#213](https://github.com/webhippie/mygithub/issues/213)) ([1c7b37b](https://github.com/webhippie/mygithub/commit/1c7b37bf4c4856c28f6155cb5be78736b1923614))
+
+
+### Bugfixes
+
+* **patch:** update golang docker tag to v1.25.5 ([#211](https://github.com/webhippie/mygithub/issues/211)) ([ef1d3b1](https://github.com/webhippie/mygithub/commit/ef1d3b1e9518b354988a20cc758237863ac85b76))
+* **patch:** update module github.com/spf13/cobra to v1.10.2 ([#215](https://github.com/webhippie/mygithub/issues/215)) ([8983f17](https://github.com/webhippie/mygithub/commit/8983f17c336cd3f94b26d8914a6910d6603c0a8d))
+
 ## [6.0.0](https://github.com/webhippie/mygithub/compare/v5.0.0...v6.0.0) (2025-11-17)
 
 
