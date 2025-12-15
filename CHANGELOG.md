@@ -1,5 +1,12 @@
 # Changelog
 
+## [7.1.0](https://github.com/webhippie/mygithub/compare/v7.0.0...v7.1.0) (2025-12-15)
+
+
+### Features
+
+* **minor:** update module golang.org/x/oauth2 to v0.34.0 ([#221](https://github.com/webhippie/mygithub/issues/221)) ([35bd955](https://github.com/webhippie/mygithub/commit/35bd955ff53af2ccc3421a337633b9450a5e4bf8))
+
 ## [7.0.0](https://github.com/webhippie/mygithub/compare/v6.0.0...v7.0.0) (2025-12-08)
 
 
