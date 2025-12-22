@@ -1,5 +1,13 @@
 # Changelog
 
+## [7.1.1](https://github.com/webhippie/mygithub/compare/v7.1.0...v7.1.1) (2025-12-22)
+
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 865b95f ([#225](https://github.com/webhippie/mygithub/issues/225)) ([deb4dd1](https://github.com/webhippie/mygithub/commit/deb4dd18f52f3aa203bb029f19322892a2e45315))
+* **deps:** update alpine:3.23 docker digest to be171b5 ([#224](https://github.com/webhippie/mygithub/issues/224)) ([36585b2](https://github.com/webhippie/mygithub/commit/36585b25acedac57bc867afd3996d17fec9c6880))
+
 ## [7.1.0](https://github.com/webhippie/mygithub/compare/v7.0.0...v7.1.0) (2025-12-15)
 
 
