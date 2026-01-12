@@ -1,5 +1,17 @@
 # Changelog
 
+## [8.0.0](https://github.com/webhippie/mygithub/compare/v7.1.1...v8.0.0) (2026-01-12)
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v80 to v81 ([#231](https://github.com/webhippie/mygithub/issues/231)) ([95b5ce7](https://github.com/webhippie/mygithub/commit/95b5ce73cd7c74e0d9a3deda42346419519571ae))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([b77e841](https://github.com/webhippie/mygithub/commit/b77e841098d6478d6a5dcf2eba2a0d64aefa2cf1))
+* **flake:** updated lockfile [skip ci] ([7b5c3d0](https://github.com/webhippie/mygithub/commit/7b5c3d01cf92634da54c19e9f45eadbf50d5a4fd))
+* **flake:** updated lockfile [skip ci] ([de93081](https://github.com/webhippie/mygithub/commit/de930816d6fb8daf05c18f426c249778a9c4dcef))
+
 ## [7.1.1](https://github.com/webhippie/mygithub/compare/v7.1.0...v7.1.1) (2025-12-22)
 
 
