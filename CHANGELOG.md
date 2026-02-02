@@ -1,5 +1,21 @@
 # Changelog
 
+## [9.0.0](https://github.com/webhippie/mygithub/compare/v8.0.0...v9.0.0) (2026-02-02)
+
+### Bugfixes
+
+* **deps:** update alpine:3.23 docker digest to 2510918 ([#236](https://github.com/webhippie/mygithub/issues/236)) ([8d804c1](https://github.com/webhippie/mygithub/commit/8d804c1d687e409ad22c4f8c39ffab1263174e9d))
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v81 to v82 ([#235](https://github.com/webhippie/mygithub/issues/235)) ([8e6fee4](https://github.com/webhippie/mygithub/commit/8e6fee482bbc8a0561c50c6e88a8d9e983e13a4b))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([c3e5e03](https://github.com/webhippie/mygithub/commit/c3e5e0389f78dd3ea14c35cd89871dca8b1fc6ae))
+* **flake:** updated lockfile [skip ci] ([c1e97c9](https://github.com/webhippie/mygithub/commit/c1e97c9ca125e74a320a89b774a16ea5934300cf))
+* **flake:** updated lockfile [skip ci] ([55b6cd3](https://github.com/webhippie/mygithub/commit/55b6cd3ef17a522f283a335fc39a1c87c97a78f6))
+
 ## [8.0.0](https://github.com/webhippie/mygithub/compare/v7.1.1...v8.0.0) (2026-01-12)
 
 ### Dependencies
