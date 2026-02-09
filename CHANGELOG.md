@@ -1,5 +1,15 @@
 # Changelog
 
+## [9.1.0](https://github.com/webhippie/mygithub/compare/v9.0.0...v9.1.0) (2026-02-09)
+
+### Dependencies
+
+* **minor:** update module golang.org/x/oauth2 to v0.35.0 ([#239](https://github.com/webhippie/mygithub/issues/239)) ([e89ff07](https://github.com/webhippie/mygithub/commit/e89ff07559cac26e730e0aa7d7cafe7dfdb75cf8))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([4166c2f](https://github.com/webhippie/mygithub/commit/4166c2f4283e7b4978b36df23e02e86570748fd6))
+
 ## [9.0.0](https://github.com/webhippie/mygithub/compare/v8.0.0...v9.0.0) (2026-02-02)
 
 ### Bugfixes
