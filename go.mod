@@ -3,7 +3,7 @@ module github.com/webhippie/mygithub
 go 1.24.0
 
 require (
-	github.com/google/go-github/v82 v82.0.0
+	github.com/google/go-github/v83 v83.0.0
 	github.com/joho/godotenv v1.5.1
 	github.com/rs/zerolog v1.34.0
 	github.com/spf13/cobra v1.10.2
