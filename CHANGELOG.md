@@ -1,5 +1,16 @@
 # Changelog
 
+## [10.0.0](https://github.com/webhippie/mygithub/compare/v9.1.0...v10.0.0) (2026-02-23)
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v82 to v83 ([#240](https://github.com/webhippie/mygithub/issues/240)) ([7cab4ca](https://github.com/webhippie/mygithub/commit/7cab4ca743fe79622b53005dc8051f3f0f6e24d1))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([afb5242](https://github.com/webhippie/mygithub/commit/afb52425abf891b995828fb0c69a1db223f0dde0))
+* **flake:** updated lockfile [skip ci] ([0b9239d](https://github.com/webhippie/mygithub/commit/0b9239d80b06e1126c78a512bc0601119ed71cc3))
+
 ## [9.1.0](https://github.com/webhippie/mygithub/compare/v9.0.0...v9.1.0) (2026-02-09)
 
 ### Dependencies
