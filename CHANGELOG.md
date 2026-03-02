@@ -1,5 +1,26 @@
 # Changelog
 
+## [11.0.0](https://github.com/webhippie/mygithub/compare/v10.0.0...v11.0.0) (2026-03-02)
+
+### Features
+
+* upgrade build process to go 1.25 ([3b0f127](https://github.com/webhippie/mygithub/commit/3b0f127c57c9b513a55e2d067d39c3a2abe4045e))
+
+### Bugfixes
+
+* **deps:** pin golang docker tag to ac09a5f ([#242](https://github.com/webhippie/mygithub/issues/242)) ([630e2d6](https://github.com/webhippie/mygithub/commit/630e2d62cd546c5e82538494c8ad3f26300ed221))
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v83 to v84 ([#244](https://github.com/webhippie/mygithub/issues/244)) ([47608ff](https://github.com/webhippie/mygithub/commit/47608ff1a7438f925d84d381e5940006ed250e91))
+* **minor:** update golang docker tag to v1.26.0 ([#243](https://github.com/webhippie/mygithub/issues/243)) ([89ac563](https://github.com/webhippie/mygithub/commit/89ac56368ddd077d3c563f9030bcc7c6edbb5723))
+
+### Miscellaneous
+
+* enable skip-package-name-collision-with-go-std for revive ([f1178bc](https://github.com/webhippie/mygithub/commit/f1178bc0dae15af7519a6b4bdad9d71db64ce3cd))
+* **flake:** updated lockfile [skip ci] ([a59bbc8](https://github.com/webhippie/mygithub/commit/a59bbc8c5df7cc0f9a84a78ed4aba45ac9b6e669))
+* replace nixfmt package ([9bdbbee](https://github.com/webhippie/mygithub/commit/9bdbbee3160b9436ab62557870903c2915c1bb23))
+
 ## [10.0.0](https://github.com/webhippie/mygithub/compare/v9.1.0...v10.0.0) (2026-02-23)
 
 ### Dependencies
