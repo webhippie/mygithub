@@ -1,5 +1,16 @@
 # Changelog
 
+## [11.1.0](https://github.com/webhippie/mygithub/compare/v11.0.0...v11.1.0) (2026-03-09)
+
+### Dependencies
+
+* **minor:** update module golang.org/x/oauth2 to v0.36.0 ([#253](https://github.com/webhippie/mygithub/issues/253)) ([158d404](https://github.com/webhippie/mygithub/commit/158d40483f24bfe8586961ddd4c9bb5dd8250634))
+* **patch:** update golang docker tag to v1.26.1 ([#252](https://github.com/webhippie/mygithub/issues/252)) ([b12f701](https://github.com/webhippie/mygithub/commit/b12f701b5ce54467bbf7bca860dffab45b5455c8))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([27cd8d9](https://github.com/webhippie/mygithub/commit/27cd8d9dfe322a7c908feb77ef31279f9248f0fc))
+
 ## [11.0.0](https://github.com/webhippie/mygithub/compare/v10.0.0...v11.0.0) (2026-03-02)
 
 ### Features
