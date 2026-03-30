@@ -1,5 +1,17 @@
 # Changelog
 
+## [11.2.0](https://github.com/webhippie/mygithub/compare/v11.1.0...v11.2.0) (2026-03-30)
+
+### Dependencies
+
+* **minor:** update module github.com/rs/zerolog to v1.35.0 ([#259](https://github.com/webhippie/mygithub/issues/259)) ([9d012a6](https://github.com/webhippie/mygithub/commit/9d012a60c1d126e8c73c54f72715ff89bd727a56))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([3fb8b90](https://github.com/webhippie/mygithub/commit/3fb8b90c79bd34d76da8e191e9553b189767c215))
+* **flake:** updated lockfile [skip ci] ([3893f29](https://github.com/webhippie/mygithub/commit/3893f29298b16b6b2b9fee8323d35bf1ffa4ef20))
+* **flake:** updated lockfile [skip ci] ([9f74ce2](https://github.com/webhippie/mygithub/commit/9f74ce235d523e274bae98e20717e9b3d5a17a1f))
+
 ## [11.1.0](https://github.com/webhippie/mygithub/compare/v11.0.0...v11.1.0) (2026-03-09)
 
 ### Dependencies
