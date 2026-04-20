@@ -1,5 +1,16 @@
 # Changelog
 
+## [11.2.2](https://github.com/webhippie/mygithub/compare/v11.2.1...v11.2.2) (2026-04-20)
+
+### Bugfixes
+
+* **deps:** update docker digests ([#262](https://github.com/webhippie/mygithub/issues/262)) ([f3c4d54](https://github.com/webhippie/mygithub/commit/f3c4d549f2e077e633b24fd4c07e70f060440d8f))
+* **deps:** update golang:1.26.2-alpine docker digest to f853308 ([#264](https://github.com/webhippie/mygithub/issues/264)) ([a3a6c7d](https://github.com/webhippie/mygithub/commit/a3a6c7da04ae0a5f5dcf0fa45e62fda75038b17d))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([a7fce9a](https://github.com/webhippie/mygithub/commit/a7fce9abec711ff78d2226f2ad2e5aa92882a882))
+
 ## [11.2.1](https://github.com/webhippie/mygithub/compare/v11.2.0...v11.2.1) (2026-04-13)
 
 ### Dependencies
