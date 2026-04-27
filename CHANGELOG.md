@@ -1,5 +1,16 @@
 # Changelog
 
+## [12.0.0](https://github.com/webhippie/mygithub/compare/v11.2.2...v12.0.0) (2026-04-27)
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v84 to v85 ([#265](https://github.com/webhippie/mygithub/issues/265)) ([988fd00](https://github.com/webhippie/mygithub/commit/988fd0080a486d76144e9061c0167b78c0306149))
+* **patch:** update module github.com/rs/zerolog to v1.35.1 ([#266](https://github.com/webhippie/mygithub/issues/266)) ([7ad0eb6](https://github.com/webhippie/mygithub/commit/7ad0eb6243961d96dfb577f8c12043b31d2df85e))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([93f4397](https://github.com/webhippie/mygithub/commit/93f439771d66d3a16768ba10e1ec5b683cf51489))
+
 ## [11.2.2](https://github.com/webhippie/mygithub/compare/v11.2.1...v11.2.2) (2026-04-20)
 
 ### Bugfixes
