@@ -1,5 +1,17 @@
 # Changelog
 
+## [13.0.0](https://github.com/webhippie/mygithub/compare/v12.0.0...v13.0.0) (2026-05-11)
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v85 to v86 ([#270](https://github.com/webhippie/mygithub/issues/270)) ([b81e311](https://github.com/webhippie/mygithub/commit/b81e311a66e75c955cb7ecab87fd96cd1fb95554))
+* **patch:** update golang docker tag to v1.26.3 ([#269](https://github.com/webhippie/mygithub/issues/269)) ([16a4734](https://github.com/webhippie/mygithub/commit/16a47349f9f711abe8d1eec307036082fb76059d))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([a018ed8](https://github.com/webhippie/mygithub/commit/a018ed879cbd9e697bd3fc43dc7b3f4a6d7b0f35))
+* **flake:** updated lockfile [skip ci] ([8dd2e6b](https://github.com/webhippie/mygithub/commit/8dd2e6b804c2c213498c046addd8033f28d30fd6))
+
 ## [12.0.0](https://github.com/webhippie/mygithub/compare/v11.2.2...v12.0.0) (2026-04-27)
 
 ### Dependencies
