@@ -1,6 +1,6 @@
 module github.com/webhippie/mygithub
 
-go 1.25.0
+go 1.26.0
 
 require (
 	github.com/google/go-github/v86 v86.0.0
