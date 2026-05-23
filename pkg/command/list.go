@@ -36,7 +36,7 @@ func init() {
 }
 
 func listAction(ccmd *cobra.Command, args []string) error {
-	client, err := Client(ccmd.Context())
+	client, err := Client()
 
 	if err != nil {
 		return err

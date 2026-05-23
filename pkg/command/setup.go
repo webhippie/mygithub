@@ -1,7 +1,6 @@
 package command
 
 import (
-	"context"
 	"os"
 	"strings"
 
@@ -87,7 +86,7 @@ func readConfig() error {
 }
 
 // Client provides a GitHub client.
-func Client(ctx context.Context) (*github.Client, error) {
+func Client() (*github.Client, error) {
 	opts := make([]github.ClientOptionsFunc, 0)
 
 	if viper.GetString("github.token") != "" {
