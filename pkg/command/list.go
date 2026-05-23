@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/google/go-github/v86/github"
+	"github.com/google/go-github/v88/github"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -16,7 +16,7 @@ var (
 		Use:     "list [name]",
 		Aliases: []string{"l"},
 		Short:   "List available repositories",
-		Run:     listAction,
+		RunE:    listAction,
 		Args: func(_ *cobra.Command, args []string) error {
 			if len(args) != 1 {
 				return fmt.Errorf("missing name argument")
@@ -35,8 +35,12 @@ func init() {
 	_ = viper.BindPFlag("list.format", listCmd.PersistentFlags().Lookup("format"))
 }
 
-func listAction(ccmd *cobra.Command, args []string) {
-	client := Client(ccmd.Context())
+func listAction(ccmd *cobra.Command, args []string) error {
+	client, err := Client()
+
+	if err != nil {
+		return err
+	}
 
 	opt := &github.RepositoryListByUserOptions{
 		ListOptions: github.ListOptions{
@@ -93,4 +97,6 @@ func listAction(ccmd *cobra.Command, args []string) {
 				Msg(*repo.Name)
 		}
 	}
+
+	return nil
 }
