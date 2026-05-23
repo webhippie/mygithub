@@ -9,7 +9,6 @@ import (
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
-	"golang.org/x/oauth2"
 )
 
 func setupLogger() error {
@@ -88,19 +87,14 @@ func readConfig() error {
 }
 
 // Client provides a GitHub client.
-func Client(ctx context.Context) *github.Client {
-	if viper.GetString("github.token") == "" {
-		return github.NewClient(nil)
+func Client(ctx context.Context) (*github.Client, error) {
+	opts := make([]github.ClientOptionsFunc, 0)
+
+	if viper.GetString("github.token") != "" {
+		opts = append(opts, github.WithAuthToken(
+			viper.GetString("github.token"),
+		))
 	}
 
-	return github.NewClient(
-		oauth2.NewClient(
-			ctx,
-			oauth2.StaticTokenSource(
-				&oauth2.Token{
-					AccessToken: viper.GetString("github.token"),
-				},
-			),
-		),
-	)
+	return github.NewClient(opts...)
 }
