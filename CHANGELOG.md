@@ -1,5 +1,20 @@
 # Changelog
 
+## [14.0.0](https://github.com/webhippie/mygithub/compare/v13.0.0...v14.0.0) (2026-05-25)
+
+### Features
+
+* upgrade required go version to 1.26 ([27c1cad](https://github.com/webhippie/mygithub/commit/27c1cadf4a34d71f9c17df25c160c38587761e18))
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v86 to v88 ([#274](https://github.com/webhippie/mygithub/issues/274)) ([748f5ed](https://github.com/webhippie/mygithub/commit/748f5ed78802ada52022b49d5610f49a4d86aaa4))
+
+### Miscellaneous
+
+* **flake:** updated lockfile [skip ci] ([52795aa](https://github.com/webhippie/mygithub/commit/52795aadb895bed6b509de58f7dc4a84b86888bc))
+* **flake:** updated lockfile [skip ci] ([dc65d33](https://github.com/webhippie/mygithub/commit/dc65d33dce85dbc0ba18950f37a1d6306467fe25))
+
 ## [13.0.0](https://github.com/webhippie/mygithub/compare/v12.0.0...v13.0.0) (2026-05-11)
 
 ### Dependencies
