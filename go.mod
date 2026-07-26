@@ -3,13 +3,12 @@ module github.com/webhippie/mygithub
 go 1.26.0
 
 require (
-	github.com/google/go-github/v88 v88.0.0
+	github.com/google/go-github/v89 v89.0.0
 	github.com/joho/godotenv v1.5.1
 	github.com/rs/zerolog v1.35.1
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
 	github.com/stretchr/testify v1.11.1
-	golang.org/x/oauth2 v0.36.0
 )
 
 require (
