@@ -1,5 +1,7 @@
 # Changelog
 
+## [16.0.1](https://github.com/webhippie/mygithub/compare/v16.0.0...v16.0.1) (2026-08-17)
+
 ## [16.0.0](https://github.com/webhippie/mygithub/compare/v15.0.0...v16.0.0) (2026-08-10)
 
 ## [15.0.0](https://github.com/webhippie/mygithub/compare/v14.0.0...v15.0.0) (2026-07-27)
