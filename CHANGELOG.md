@@ -1,5 +1,29 @@
 # Changelog
 
+## [17.0.0](https://github.com/webhippie/mygithub/compare/v16.0.1...v17.0.0) (2026-09-14)
+
+### Features
+
+* restructure repo and build processes ([89f21ba](https://github.com/webhippie/mygithub/commit/89f21ba30dbcad0d5aea64b4e0a92a5e4d6d4f10))
+
+### Bugfixes
+
+* **deps:** update golang:1.27.0-alpine docker digest to 4c9fe60 ([#289](https://github.com/webhippie/mygithub/issues/289)) ([195700c](https://github.com/webhippie/mygithub/commit/195700ca63ae8b9ae990ac91bfb62157708bf83e))
+* **deps:** update golang:1.27.1-alpine docker digest to cf6fca6 ([#293](https://github.com/webhippie/mygithub/issues/293)) ([b16ab0e](https://github.com/webhippie/mygithub/commit/b16ab0e4bb7f160099ed36247c0bdb5798f49da7))
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v90 to v91 ([#294](https://github.com/webhippie/mygithub/issues/294)) ([fe15dd3](https://github.com/webhippie/mygithub/commit/fe15dd36d0878abf79c778b16672e1c2de00d918))
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.26.0 ([#295](https://github.com/webhippie/mygithub/issues/295)) ([f24e3cd](https://github.com/webhippie/mygithub/commit/f24e3cda5f73efbc2da081bb660f11cbaf57f1f2))
+* **minor:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.27.0 ([#297](https://github.com/webhippie/mygithub/issues/297)) ([c67592a](https://github.com/webhippie/mygithub/commit/c67592a84f829ad26689a3e0bad523de90ab11d1))
+* **minor:** update dependency hugo-extended to v0.166.0 ([#298](https://github.com/webhippie/mygithub/issues/298)) ([0d53e75](https://github.com/webhippie/mygithub/commit/0d53e7509c36275bc2fa2cd3e81126f6c50b7ba0))
+* **minor:** update dependency task to v3.53.1 ([#296](https://github.com/webhippie/mygithub/issues/296)) ([5ad2104](https://github.com/webhippie/mygithub/commit/5ad2104bcc01b089f28f37de0e255e1ac9e1b86d))
+* **minor:** update golang docker tag to v1.27.0 ([#288](https://github.com/webhippie/mygithub/issues/288)) ([8ab19b2](https://github.com/webhippie/mygithub/commit/8ab19b259293cf7bd5a78eda297a82a53e6d447e))
+* **minor:** update module github.com/stretchr/testify to v1.12.0 ([#286](https://github.com/webhippie/mygithub/issues/286)) ([73569cf](https://github.com/webhippie/mygithub/commit/73569cf561ee8ff431bb3323af03ef40f3bb1057))
+* **patch:** update dependency prek to v0.5.3 ([#299](https://github.com/webhippie/mygithub/issues/299)) ([29f042b](https://github.com/webhippie/mygithub/commit/29f042b73ad3d55c1c8300bca2c79266c917e37f))
+* **patch:** update golang docker tag to v1.27.1 ([#292](https://github.com/webhippie/mygithub/issues/292)) ([0cfc01c](https://github.com/webhippie/mygithub/commit/0cfc01cfcd05e218c15b7b8359c30fcf2e16080b))
+* **patch:** update module github.com/stretchr/testify to v1.12.1 ([#287](https://github.com/webhippie/mygithub/issues/287)) ([841b118](https://github.com/webhippie/mygithub/commit/841b118d80b775c434135817d7881742fa1cf86e))
+
 ## [16.0.1](https://github.com/webhippie/mygithub/compare/v16.0.0...v16.0.1) (2026-08-17)
 
 ## [16.0.0](https://github.com/webhippie/mygithub/compare/v15.0.0...v16.0.0) (2026-08-10)
