@@ -1,5 +1,18 @@
 # Changelog
 
+## [18.0.0](https://github.com/webhippie/mygithub/compare/v17.0.0...v18.0.0) (2026-09-21)
+
+### Bugfixes
+
+* **deps:** update alpine:3.24 docker digest to e7c4abb ([#302](https://github.com/webhippie/mygithub/issues/302)) ([9d58062](https://github.com/webhippie/mygithub/commit/9d580627aaf67dc355167da7e6094a775be6da86))
+* **deps:** update docker digests ([#303](https://github.com/webhippie/mygithub/issues/303)) ([9fe5728](https://github.com/webhippie/mygithub/commit/9fe5728478e9fb6d8b968c9c4c7b44297a3dbeaf))
+* **deps:** update docker digests ([#304](https://github.com/webhippie/mygithub/issues/304)) ([94f0828](https://github.com/webhippie/mygithub/commit/94f08289e20fdc75c07057417c34b8300029b041))
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v91 to v92 ([#300](https://github.com/webhippie/mygithub/issues/300)) ([dca7abc](https://github.com/webhippie/mygithub/commit/dca7abcaed67e6cc8baea4558705fa734eeae472))
+* **mise:** update dependency goreleaser to v2.18.2 ([#301](https://github.com/webhippie/mygithub/issues/301)) ([ab6a79a](https://github.com/webhippie/mygithub/commit/ab6a79a7930395b582da8ff90c8ae5b59a2a2764))
+
 ## [17.0.0](https://github.com/webhippie/mygithub/compare/v16.0.1...v17.0.0) (2026-09-14)
 
 ### Features
