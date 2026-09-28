@@ -1,5 +1,15 @@
 # Changelog
 
+## [18.0.1](https://github.com/webhippie/mygithub/compare/v18.0.0...v18.0.1) (2026-09-28)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.1-alpine docker digest to 8a5910f ([#305](https://github.com/webhippie/mygithub/issues/305)) ([963b263](https://github.com/webhippie/mygithub/commit/963b2634f54ab346498b21c1c2ff825b447ae61c))
+
+### Dependencies
+
+* **mise:** update dependency golangci-lint to v2.14.0 ([#306](https://github.com/webhippie/mygithub/issues/306)) ([6fe90fc](https://github.com/webhippie/mygithub/commit/6fe90fcba20c8c9cd73277a15ede2646b3dc0f3f))
+
 ## [18.0.0](https://github.com/webhippie/mygithub/compare/v17.0.0...v18.0.0) (2026-09-21)
 
 ### Bugfixes
