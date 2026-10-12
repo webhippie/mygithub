@@ -1,5 +1,22 @@
 # Changelog
 
+## [18.0.2](https://github.com/webhippie/mygithub/compare/v18.0.1...v18.0.2) (2026-10-12)
+
+### Bugfixes
+
+* **deps:** update golang:1.27.2-alpine docker digest to f92b6ef ([#317](https://github.com/webhippie/mygithub/issues/317)) ([5fea2c2](https://github.com/webhippie/mygithub/commit/5fea2c27149d88567db70f768f800f860dd7ce64))
+
+### Dependencies
+
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.28.0 ([#313](https://github.com/webhippie/mygithub/issues/313)) ([fda98e3](https://github.com/webhippie/mygithub/commit/fda98e37b117c429a3b00538425be92f27d2a62a))
+* **mise:** update dependency go to v1.27.2 ([#314](https://github.com/webhippie/mygithub/issues/314)) ([ee533f6](https://github.com/webhippie/mygithub/commit/ee533f66399aaa6365bedfc0a11fb6af1dffb477))
+* **mise:** update dependency goreleaser to v2.18.3 ([#316](https://github.com/webhippie/mygithub/issues/316)) ([e45f343](https://github.com/webhippie/mygithub/commit/e45f343411e4d9e15dcf50921e7bd05ce8d33605))
+* **mise:** update dependency hugo-extended to v0.167.0 ([#309](https://github.com/webhippie/mygithub/issues/309)) ([2c251ea](https://github.com/webhippie/mygithub/commit/2c251ea8c940a27be8f27d47790477cd19025446))
+* **mise:** update dependency prek to v0.5.4 ([#308](https://github.com/webhippie/mygithub/issues/308)) ([6dfbcda](https://github.com/webhippie/mygithub/commit/6dfbcda4a669e993eaac5832a47f994e421a1c11))
+* **mise:** update dependency prek to v0.5.5 ([#312](https://github.com/webhippie/mygithub/issues/312)) ([85b9079](https://github.com/webhippie/mygithub/commit/85b90791e7f1805c03d3a08a5e5536dd943139b7))
+* **mise:** update dependency task to v3.54.0 ([#311](https://github.com/webhippie/mygithub/issues/311)) ([7fa0f02](https://github.com/webhippie/mygithub/commit/7fa0f02362e98b3ed98dfd52e15e319bb1d9f0a3))
+* **patch:** update golang docker tag to v1.27.2 ([#315](https://github.com/webhippie/mygithub/issues/315)) ([3997ae6](https://github.com/webhippie/mygithub/commit/3997ae6db744ae9d66ac09f238506c2e015b6999))
+
 ## [18.0.1](https://github.com/webhippie/mygithub/compare/v18.0.0...v18.0.1) (2026-09-28)
 
 ### Bugfixes
