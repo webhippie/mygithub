@@ -1,5 +1,15 @@
 # Changelog
 
+## [19.0.0](https://github.com/webhippie/mygithub/compare/v18.0.2...v19.0.0) (2026-10-19)
+
+### Dependencies
+
+* **major:** update module github.com/google/go-github/v92 to v93 ([#321](https://github.com/webhippie/mygithub/issues/321)) ([56967fd](https://github.com/webhippie/mygithub/commit/56967fd27a0b1acf65b88763a534474198dec8ad))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.29.0 ([#320](https://github.com/webhippie/mygithub/issues/320)) ([1ee0919](https://github.com/webhippie/mygithub/commit/1ee09197888b4e235dec0ec66fa2c40a9941e45c))
+* **mise:** update dependency golangci-lint to v2.15.0 ([#322](https://github.com/webhippie/mygithub/issues/322)) ([64c4bda](https://github.com/webhippie/mygithub/commit/64c4bda0c4981b268e40ac9bd6a16e77ccc71384))
+* **mise:** update dependency hugo-extended to v0.168.0 ([#319](https://github.com/webhippie/mygithub/issues/319)) ([d6d14a9](https://github.com/webhippie/mygithub/commit/d6d14a9fdd1de77b200ce105eeb5772f9e590cac))
+* **mise:** update dependency prek to v0.5.6 ([#323](https://github.com/webhippie/mygithub/issues/323)) ([bb51f71](https://github.com/webhippie/mygithub/commit/bb51f7153d350c2736bce2601ef96c6337c86802))
+
 ## [18.0.2](https://github.com/webhippie/mygithub/compare/v18.0.1...v18.0.2) (2026-10-12)
 
 ### Bugfixes
