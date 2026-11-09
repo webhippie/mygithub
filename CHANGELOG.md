@@ -1,5 +1,18 @@
 # Changelog
 
+## [19.0.3](https://github.com/webhippie/mygithub/compare/v19.0.2...v19.0.3) (2026-11-09)
+
+### Bugfixes
+
+* **deps:** update alpine:3.24 docker digest to f59abe6 ([#346](https://github.com/webhippie/mygithub/issues/346)) ([f1d3803](https://github.com/webhippie/mygithub/commit/f1d38034850b6c822a990063abd1b43ed252ed34))
+* **deps:** update docker digests ([#345](https://github.com/webhippie/mygithub/issues/345)) ([457873c](https://github.com/webhippie/mygithub/commit/457873ce4498939429e236767bdac545e9d0ba0c))
+* **deps:** update golang:1.27.3-alpine docker digest to fa48812 ([#344](https://github.com/webhippie/mygithub/issues/344)) ([52e1f42](https://github.com/webhippie/mygithub/commit/52e1f427453c145b5cd1fa5c00172cd6b20bfa38))
+
+### Dependencies
+
+* **mise:** update dependency goreleaser to v2.20.0 ([#343](https://github.com/webhippie/mygithub/issues/343)) ([9f60e02](https://github.com/webhippie/mygithub/commit/9f60e022c4a159c82241f701ab7c88036127e168))
+* **mise:** update dependency prek to v0.5.10 ([#342](https://github.com/webhippie/mygithub/issues/342)) ([8dc7633](https://github.com/webhippie/mygithub/commit/8dc763326f68f1b4f00ac3bc16a4557a2747f711))
+
 ## [19.0.2](https://github.com/webhippie/mygithub/compare/v19.0.1...v19.0.2) (2026-11-02)
 
 ### Bugfixes
