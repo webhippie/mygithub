@@ -1,5 +1,20 @@
 # Changelog
 
+## [19.0.4](https://github.com/webhippie/mygithub/compare/v19.0.3...v19.0.4) (2026-11-16)
+
+* automated release update [skip ci] ([65370c6](https://github.com/webhippie/mygithub/commit/65370c658804bcd70722c22df12aae40c3edfcf6))
+
+### Dependencies
+
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.31.0 ([#350](https://github.com/webhippie/mygithub/issues/350)) ([da52e83](https://github.com/webhippie/mygithub/commit/da52e83348051b6be6fc1796cae967b16ea236ec))
+* **mise:** update dependency github:cloudsmith-io/cloudsmith-cli to v1.31.1 ([#351](https://github.com/webhippie/mygithub/issues/351)) ([ac6f826](https://github.com/webhippie/mygithub/commit/ac6f826a88a4424aff6a8f429173054675a92bdc))
+* **mise:** update dependency go to v1.27.4 ([#347](https://github.com/webhippie/mygithub/issues/347)) ([40b52cf](https://github.com/webhippie/mygithub/commit/40b52cfe20c37d999140b62e2f0ad7935df1b338))
+* **mise:** update dependency goreleaser to v2.20.1 ([#349](https://github.com/webhippie/mygithub/issues/349)) ([7fedf0c](https://github.com/webhippie/mygithub/commit/7fedf0cb4a65d361318d85a20c394a1a1fe044ae))
+* **mise:** update dependency goreleaser to v2.20.2 ([#352](https://github.com/webhippie/mygithub/issues/352)) ([e5b3711](https://github.com/webhippie/mygithub/commit/e5b37116ad5ce28450b4a301739d168a774a2106))
+* **mise:** update dependency hugo-extended to v0.170.0 ([#353](https://github.com/webhippie/mygithub/issues/353)) ([7ff1c39](https://github.com/webhippie/mygithub/commit/7ff1c39a92dc20cb1e200b5c7781891b27c269a8))
+* **mise:** update dependency prek to v0.5.11 ([#355](https://github.com/webhippie/mygithub/issues/355)) ([fc8b3e4](https://github.com/webhippie/mygithub/commit/fc8b3e455d4f25720d5d6958d609772280830d19))
+* **patch:** update golang docker tag to v1.27.4 ([#348](https://github.com/webhippie/mygithub/issues/348)) ([b73b485](https://github.com/webhippie/mygithub/commit/b73b485dda984f8ccbac51633d8f7ba5fc806c38))
+
 ## [19.0.3](https://github.com/webhippie/mygithub/compare/v19.0.2...v19.0.3) (2026-11-09)
 
 ### Bugfixes
